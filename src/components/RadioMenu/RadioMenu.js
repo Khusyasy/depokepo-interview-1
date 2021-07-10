@@ -53,10 +53,10 @@ function RadioMenu() {
 
 const styles = {
   main: {
-    width: "24rem",
+    width: "20rem",
     height: "30rem",
     margin: "1rem",
-    borderRadius: "2rem",
+    borderRadius: "1rem",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
@@ -68,7 +68,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "space-between",
     background: "#3081f2",
-    padding: "0 2rem",
+    padding: "0 1rem",
     color: "#f1f6fe",
   },
   btn: {

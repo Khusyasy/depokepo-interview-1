@@ -50,8 +50,10 @@ const styles = {
     cursor: "pointer",
   },
   img: {
-    height: "5rem",
-    width: "5rem",
+    height: "6rem",
+    width: "6rem",
+    border: "solid 0.2rem #3081f2",
+    borderRadius: "0.2rem",
   }
 };
 
