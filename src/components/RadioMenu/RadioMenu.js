@@ -37,6 +37,7 @@ const styles = {
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
+    border: "solid 1px black",
   },
   head: {
     height: "3rem",

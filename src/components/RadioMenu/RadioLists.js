@@ -9,6 +9,7 @@ function RadioLists({ radios }) {
           name={radio.name}
           frequency={radio.frequency}
           image={radio.image}
+          open={true}
         />
       ))}
     </div>
@@ -18,6 +19,7 @@ function RadioLists({ radios }) {
 const styles = {
   main: {
     flex: 1,
+    overflowY: "auto",
   }
 };
 
