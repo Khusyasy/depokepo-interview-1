@@ -19,16 +19,28 @@ function RadioMenu() {
   return (
     <div style={styles.container}>
         <div style={styles.head}>
-          STATIONS
+          <div style={styles.btn}>
+            <i className="fas fa-chevron-left"></i>
+          </div>
+          <div style={styles.title}>
+            STATIONS
+          </div>
+          <div style={styles.btn}>
+            <i className="fas fa-power-off"></i>
+          </div>
         </div>
         <RadioLists radios={radios} selected={selected} setSelected={setSelected} />
         <div style={styles.bottom}>
-          <span>
-            currently playing
-          </span>
-          <span>
-            { radios[selected]?.name }
-          </span>
+        {
+          selected > -1 && <>
+            <span style={styles.playing}>
+              currently playing
+            </span>
+            <span style={styles.selected}>
+              { radios[selected]?.name }
+            </span>
+          </>
+        }
         </div>
     </div>
   );
@@ -43,15 +55,25 @@ const styles = {
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
-    border: "solid 1px #8baddd",
+    border: "solid 1px #b0d1ff",
   },
   head: {
     height: "3rem",
-    display: "grid",
-    placeItems: "center",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    background: "#3081f2",
+    padding: "0 2rem",
+    color: "#f1f6fe",
+  },
+  btn: {
+    cursor: "pointer",
+    fontSize: "1.25rem",
+  },
+  title: {
     textTransform: "uppercase",
     fontWeight: 700,
-    background: "#3081f2",
+    fontSize: "1.25rem",
   },
   bottom: {
     height: "5rem",
@@ -60,6 +82,15 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     background: "#3081f2",
+    color: "#f1f6fe",
+  },
+  playing: {
+    fontSize: "0.75rem",
+    textTransform: "uppercase",
+    color: "#b0d1ff",
+  },
+  selected: {
+    fontSize: "1.25rem",
   }
 };
 
