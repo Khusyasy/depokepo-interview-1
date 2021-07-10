@@ -21,9 +21,9 @@ function RadioList({ name, frequency, image, open, selectRadio, selectPrev, sele
 const styles = {
   main: {
     overflow: "hidden",
-    borderBottom: "solid 1px #b0d1ff",
+    borderBottom: "solid 1px #2e6171",
     margin: "1rem",
-    color: "#3081f2",
+    color: "#543361",
   },
   detail: {
     height: "2rem",
@@ -52,7 +52,7 @@ const styles = {
   img: {
     height: "6rem",
     width: "6rem",
-    border: "solid 0.2rem #3081f2",
+    border: "solid 0.2rem #543361",
     borderRadius: "0.2rem",
   }
 };

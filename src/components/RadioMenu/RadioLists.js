@@ -40,6 +40,7 @@ const styles = {
   main: {
     flex: 1,
     overflowY: "auto",
+    background: "#fef5ef",
   }
 };
 
