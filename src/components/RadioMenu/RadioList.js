@@ -1,7 +1,7 @@
 function RadioList({ name, frequency, image, open, selectRadio, selectPrev, selectNext }) {
   return (
     <div style={styles.main}>
-      <div className={"list-content" + (open ? " open" : "")} style={styles.content}>
+      <div style={{...styles.content, maxHeight: open ? "8rem" : 0}}>
         <div style={styles.btn} onClick={selectPrev}>
           <i className="fas fa-minus-circle"></i>
         </div>
@@ -44,6 +44,8 @@ const styles = {
     justifyContent: "space-between",
     margin: "0 3rem",
     overflow: "hidden",
+    maxHeight: 0,
+    transition: "max-height 200ms ease-in-out",
   },
   btn: {
     fontSize: "1.5rem",

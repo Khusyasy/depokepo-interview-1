@@ -6,12 +6,3 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-
-.list-content {
-  max-height: 0;
-  transition: max-height 200ms ease-in-out;
-}
-
-.open {
-  max-height: 8rem;
-}
