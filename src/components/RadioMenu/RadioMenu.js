@@ -1,22 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+import RadioLists from "./RadioLists";
 
 function RadioMenu() {
 
   const [radios, setRadios] = useState([]);
+
+  useEffect(() => {
+    axios.get("https://depokepo-mock-server.herokuapp.com/v1/api/radio", { headers: { Authorization: "Basic verysecretapikey" }} )
+          .then(({ data })=>{
+            setRadios(data.radios);
+            console.log(data.radios);
+          });
+  }, [])
 
   return (
     <div style={styles.container}>
         <div style={styles.head}>
           Stations
         </div>
-        <div>
-          <ul>
-            <li>something</li>
-            <li>something</li>
-            <li>something</li>
-            <li>something</li>
-          </ul>
-        </div>
+        <RadioLists radios={radios} />
         <div style={styles.bottom}>
           Stations
         </div>

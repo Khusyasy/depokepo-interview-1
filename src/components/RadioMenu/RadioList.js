@@ -1,24 +1,13 @@
-function RadioList() {
+function RadioList({ name, frequency, image }) {
   return (
-    <div style={styles.container}>
-      
+    <div>
+      {name}
+      {frequency}
     </div>
   );
 }
 
 const styles = {
-  container: {
-    width: "24rem",
-    background: "red",
-    margin: "1rem",
-    borderRadius: "2rem"
-  },
-  head: {
-    padding: "1rem",
-    textAlign: "center",
-    textTransform: "uppercase",
-    fontWeight: 700,
-  }
 };
 
 export default RadioList;
