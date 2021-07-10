@@ -23,6 +23,7 @@ const styles = {
     overflow: "hidden",
     borderBottom: "solid 1px #b0d1ff",
     margin: "1rem",
+    color: "#3081f2",
   },
   detail: {
     height: "2rem",

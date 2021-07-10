@@ -17,7 +17,7 @@ function RadioMenu() {
   }, [])
 
   return (
-    <div style={styles.container}>
+    <div style={styles.main}>
         <div style={styles.head}>
           <div style={styles.btn}>
             <i className="fas fa-chevron-left"></i>
@@ -52,7 +52,7 @@ function RadioMenu() {
 }
 
 const styles = {
-  container: {
+  main: {
     width: "24rem",
     height: "30rem",
     margin: "1rem",
