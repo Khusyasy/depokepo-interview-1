@@ -1,11 +1,11 @@
-function RadioList({ name, frequency, image, open }) {
+function RadioList({ name, frequency, image, open, idx, setSelected }) {
   return (
     <div style={styles.main}>
-      <div style={styles.detail}>
+      <div style={styles.detail} onClick={()=>{setSelected(idx)}}>
         <span>{name}</span>
         <span style={styles.freq}>{frequency}</span>
       </div>
-      <div className={"animate-height" + (open ? " open" : "")} style={styles.content}>
+      <div className={"animate-height" + (open ? " open" : " close")} style={styles.content}>
         <div style={styles.btn}><i class="far fa-minus-square"></i></div>
         <img src={image} alt={name} style={styles.img} />
         <div style={styles.btn}><i class="far fa-plus-square"></i></div>
@@ -38,6 +38,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "space-between",
     margin: "0 3rem",
+    overflow: "hidden",
   },
   btn: {
     fontSize: "1.5rem",

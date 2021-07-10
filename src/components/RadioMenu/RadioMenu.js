@@ -6,6 +6,7 @@ import RadioLists from "./RadioLists";
 function RadioMenu() {
 
   const [radios, setRadios] = useState([]);
+  const [selected, setSelected] = useState(-1);
 
   useEffect(() => {
     axios.get("https://depokepo-mock-server.herokuapp.com/v1/api/radio", { headers: { Authorization: "Basic verysecretapikey" }} )
@@ -18,11 +19,16 @@ function RadioMenu() {
   return (
     <div style={styles.container}>
         <div style={styles.head}>
-          Stations
+          STATIONS
         </div>
-        <RadioLists radios={radios} />
+        <RadioLists radios={radios} selected={selected} setSelected={setSelected} />
         <div style={styles.bottom}>
-          currently playing
+          <span>
+            currently playing
+          </span>
+          <span>
+            { radios[selected]?.name }
+          </span>
         </div>
     </div>
   );
@@ -49,8 +55,10 @@ const styles = {
   },
   bottom: {
     height: "5rem",
-    display: "grid",
-    placeItems: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     background: "#3081f2",
   }
 };
