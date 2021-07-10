@@ -1,18 +1,18 @@
 function RadioList({ name, frequency, image, open, selectRadio, selectPrev, selectNext }) {
   return (
     <div style={styles.main}>
-      <div style={styles.detail} onClick={selectRadio}>
-        <span>{name}</span>
-        <span style={styles.freq}>{frequency}</span>
-      </div>
       <div className={"list-content" + (open ? " open" : "")} style={styles.content}>
         <div style={styles.btn} onClick={selectPrev}>
-          <i className="far fa-minus-square"></i>
+          <i className="fas fa-minus-circle"></i>
         </div>
         <img src={image} alt={name} style={styles.img} />
         <div style={styles.btn} onClick={selectNext}>
-          <i className="far fa-plus-square"></i>
+          <i className="fas fa-plus-circle"></i>
         </div>
+      </div>
+      <div style={styles.detail} onClick={selectRadio}>
+        <span>{name}</span>
+        <span style={styles.freq}>{frequency}</span>
       </div>
     </div>
   );
@@ -21,9 +21,9 @@ function RadioList({ name, frequency, image, open, selectRadio, selectPrev, sele
 const styles = {
   main: {
     overflow: "hidden",
-    borderBottom: "solid 1px #2e6171",
+    borderBottom: "solid 1px #a3a8b7",
     margin: "1rem",
-    color: "#543361",
+    color: "#a3a8b7",
   },
   detail: {
     height: "2rem",
@@ -50,10 +50,10 @@ const styles = {
     cursor: "pointer",
   },
   img: {
-    height: "6rem",
-    width: "6rem",
-    border: "solid 0.2rem #543361",
-    borderRadius: "0.2rem",
+    height: "7rem",
+    width: "7rem",
+    border: "solid 0.2rem #a3a8b7",
+    borderRadius: "100%",
   }
 };
 
