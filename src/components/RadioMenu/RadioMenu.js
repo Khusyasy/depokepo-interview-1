@@ -25,14 +25,15 @@ function RadioMenu() {
           <div style={styles.title}>
             STATIONS
           </div>
-          <div style={styles.btn}>
+          <div style={styles.btn} onClick={()=>setSelected(-1)}>
             <i className="fas fa-power-off"></i>
           </div>
         </div>
         <RadioLists radios={radios} selected={selected} setSelected={setSelected} />
         <div style={styles.bottom}>
         {
-          selected > -1 && <>
+          selected > -1 ?
+          <>
             <span style={styles.playing}>
               currently playing
             </span>
@@ -40,6 +41,10 @@ function RadioMenu() {
               { radios[selected]?.name }
             </span>
           </>
+          :
+          <span style={styles.selected}>
+            OFF
+          </span>
         }
         </div>
     </div>
