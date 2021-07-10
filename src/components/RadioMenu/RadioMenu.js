@@ -22,7 +22,7 @@ function RadioMenu() {
         </div>
         <RadioLists radios={radios} />
         <div style={styles.bottom}>
-          Stations
+          currently playing
         </div>
     </div>
   );
@@ -35,12 +35,21 @@ const styles = {
     margin: "1rem",
     borderRadius: "2rem",
     overflow: "hidden",
+    display: "flex",
+    flexDirection: "column",
   },
   head: {
-    padding: "1rem",
-    textAlign: "center",
+    height: "3rem",
+    display: "grid",
+    placeItems: "center",
     textTransform: "uppercase",
     fontWeight: 700,
+    background: "#3081f2",
+  },
+  bottom: {
+    height: "5rem",
+    display: "grid",
+    placeItems: "center",
     background: "#3081f2",
   }
 };

@@ -2,7 +2,7 @@ import RadioList from "./RadioList";
 
 function RadioLists({ radios }) {
   return (
-    <div>
+    <div style={styles.main}>
       { radios && radios.map(radio=>(
         <RadioList
           key={radio.name}
@@ -16,7 +16,9 @@ function RadioLists({ radios }) {
 }
 
 const styles = {
-  
+  main: {
+    flex: 1,
+  }
 };
 
 export default RadioLists;
