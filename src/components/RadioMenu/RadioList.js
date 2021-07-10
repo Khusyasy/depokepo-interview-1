@@ -1,14 +1,18 @@
-function RadioList({ name, frequency, image, open, idx, setSelected }) {
+function RadioList({ name, frequency, image, open, selectRadio, selectPrev, selectNext }) {
   return (
     <div style={styles.main}>
-      <div style={styles.detail} onClick={()=>{setSelected(idx)}}>
+      <div style={styles.detail} onClick={selectRadio}>
         <span>{name}</span>
         <span style={styles.freq}>{frequency}</span>
       </div>
-      <div className={"animate-height" + (open ? " open" : " close")} style={styles.content}>
-        <div style={styles.btn}><i class="far fa-minus-square"></i></div>
+      <div className={"animate-height" + (open ? " open" : "")} style={styles.content}>
+        <div style={styles.btn} onClick={selectPrev}>
+          <i className="far fa-minus-square"></i>
+        </div>
         <img src={image} alt={name} style={styles.img} />
-        <div style={styles.btn}><i class="far fa-plus-square"></i></div>
+        <div style={styles.btn} onClick={selectNext}>
+          <i className="far fa-plus-square"></i>
+        </div>
       </div>
     </div>
   );
