@@ -5,7 +5,7 @@ function RadioList({ name, frequency, image, open, selectRadio, selectPrev, sele
         <span>{name}</span>
         <span style={styles.freq}>{frequency}</span>
       </div>
-      <div className={"animate-height" + (open ? " open" : "")} style={styles.content}>
+      <div className={"list-content" + (open ? " open" : "")} style={styles.content}>
         <div style={styles.btn} onClick={selectPrev}>
           <i className="far fa-minus-square"></i>
         </div>
